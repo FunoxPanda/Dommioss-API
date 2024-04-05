@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "./static/css/main.d98d2732.css",
+    "main.js": "./static/js/main.69967b67.js",
+    "static/media/wallpaper.jpg": "./static/media/wallpaper.6fc2662a65f178ae7c15.jpg",
+    "static/media/Minecraftia-Regular.ttf": "./static/media/Minecraftia-Regular.69fd3db14fbc8b3f7cdb.ttf",
+    "static/media/JosefinSans-Medium.ttf": "./static/media/JosefinSans-Medium.45a5738c27c1bbbecc0c.ttf",
+    "static/media/wallpaper.webp": "./static/media/wallpaper.3f31b531aa2b77eb605d.webp",
+    "index.html": "./index.html",
+    "main.d98d2732.css.map": "./static/css/main.d98d2732.css.map",
+    "main.69967b67.js.map": "./static/js/main.69967b67.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d98d2732.css",
+    "static/js/main.69967b67.js"
+  ]
+}

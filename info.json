@@ -1,0 +1,8 @@
+{
+    "version": "2.1.0",
+    "author": "FunoxPanda",
+    "status": {
+        "maintenance": false,
+        "end": "2038-01-19"
+    }
+}

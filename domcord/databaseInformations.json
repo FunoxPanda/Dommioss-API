@@ -1,0 +1,246 @@
+[
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_badges` (`id` int(11) NOT NULL,`SPAN` text NOT NULL,`NAME` text NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_bans_ip` (`id` int(11) NOT NULL,`ADRESS_IP` text NOT NULL,`REASON` text NULL, `AUTHOR_ID` text NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_category` (`id` int(11) NOT NULL,`NAME` text NOT NULL,`DESCRIPTION` text NULL,`ICON` text NULL,`PERMISSION_SEE_LEVEL` int(11) NOT NULL,`PERMISSION_WRITE_LEVEL` int(11) NOT NULL,`ORDER_LISTING` int(11) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_emailcode` (`id` int(11) NOT NULL,`TYPE` text NOT NULL,`CODE` text NOT NULL,`USER_MAIL` text NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_follow` (`id` int(11) NOT NULL,`USER_ID` text NOT NULL,`TYPE` text NOT NULL,`SPACE_ID` text NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_footer` (`id` int(11) NOT NULL,`NAME` text NOT NULL,`TYPE` text NOT NULL,`LINK` text NULL,`ICON` text NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_forum` (`id` int(11) NOT NULL,`NAME` text NOT NULL,`DESCRIPTION` text NULL,`PERMISSION_WRITE_LEVEL` int(11) NOT NULL,`PERMISSION_SEE_LEVEL` int(11) NOT NULL,`ICON` text NULL,`PARENT_ID` text NOT NULL,`ORDER_LISTING` int(11) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_header` (`id` int(11) NOT NULL,`NAME` text NOT NULL,`LINK` text NOT NULL,`ICON` text NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_members` (`id` int(11) NOT NULL,`NAMETAG` text NOT NULL,`DATE_CREATION` text NOT NULL,`LAST_LOGIN` text NULL,`PASSWORD` text NOT NULL,`MAIL` text NOT NULL,`IP_ADRESS` text NOT NULL,`STATUS` text NOT NULL,`BIRTHDAY` text NULL,`AVATAR_PATH` text NOT NULL,`ABOUT` text NULL,`SIGNATURE` text NULL,`RANK_ID` int(11) NOT NULL,`WEBSITE` text NULL,`DISCORD` text NULL,`TWITTER` text NULL,`GITHUB` text NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_messages` (`id` int(11) NOT NULL,`USER_ID` int(11) NOT NULL,`CONTENT` text NOT NULL,`DATE_POST` text NOT NULL,`DATE_EDIT` text NULL,`TOPIC_ID` text NOT NULL,`FORUM_ID` int(11) NOT NULL,`STATUS` int(11) NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_notifications` (`id` int(11) NOT NULL,`USER_ID` text NOT NULL,`READ_STATUS` text NOT NULL,`TYPE` text NOT NULL,`HTML_CONTENT` text NOT NULL,`NOTIF_USERAVATAR` text NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_pages` (`id` int(11) NOT NULL,`NAME` text NOT NULL,`PATH` text NOT NULL,`CONTENU` text NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_ranks` (`id` int(11) NOT NULL,`NAME` text NOT NULL,`DISPLAY` int(11) NOT NULL,`BADGE_COLOR` text NOT NULL,`PERMISSION_LEVEL` int(11) NOT NULL,`SUPERADMIN` varchar(2) NULL,`MAINTENANCE_MANAGE` varchar(2) NULL,`ADMIN_BAN` varchar(2) NULL,`MESSAGE_DELETE` varchar(2) NULL,`ADMIN_PANELACCESS` varchar(2) NULL,`ADMIN_WARN` varchar(2) NULL,`ADMIN_EDIT_OTHER_MESSAGE` varchar(2) NULL,`ADMIN_DELETE_TOPIC` varchar(2) NULL,`ADMIN_MANAGE_FORUMS` varchar(2) NULL,`ADMIN_MANAGE_CATEGORIES` varchar(2) NULL,`ADMIN_PAGE_CREATE` varchar(2) NULL,`ADMIN_TOPIC_MOVE` varchar(2) NULL,`ADMIN_TOPIC_PREFIXCHANGE` varchar(2) NULL,`ADMIN_RANK_EDIT` varchar(2) NULL,`ADMIN_TOPIC_EDIT` varchar(2) NULL,`ADMIN_THEME_EDIT` varchar(2) NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_reports` (`id` int(11) NOT NULL,`AUTHOR_ID` text NOT NULL,`REPORTED_ID` text NOT NULL,`TOPIC_ID` text NOT NULL,`MESSAGE_ID` text NOT NULL,`MESSAGE_CONTENT` text NOT NULL,`LINK` text NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_stickynotes` (`id` int(11) NOT NULL,`CONTENT` text NOT NULL,`DATE_POST` text NOT NULL,`AUTHOR` text NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_topics` (`id` int(11) NOT NULL,`USER_ID` text NOT NULL,`DATE_CREATION` text NOT NULL,`STATUT` text NOT NULL,`FORUM_ID` text NOT NULL,`NAME` text NOT NULL,`PINNED` varchar(2) NULL,`BADGE_ID` int(11) NULL,`PATH` text NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_reactions` (`id` int(11) NOT NULL,`MESSAGE_ID` text NOT NULL,`USER` text NOT NULL,`POSTER_ID` int(11) NOT NULL,`REACTION_ID` int(11) NOT NULL,`USER_ID` int(11) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "createTable",
+        "command": "CREATE TABLE `dc_reactions_images` (`id` int(11) NOT NULL,`PATH` text NOT NULL,`GIFT` int(11) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "type": "insertFirst",
+        "command": "INSERT INTO `dc_category` (`id`, `NAME`, `DESCRIPTION`, `ICON`, `PERMISSION_SEE_LEVEL`, `PERMISSION_WRITE_LEVEL`, `ORDER_LISTING`) VALUES (1, 'FIRST CATEGORY', NULL, NULL, 0, 0, 1),(2, 'SUPERADMIN CATEGORY', NULL, NULL, 99, 1, 2);"
+    },
+    {
+        "type": "insertFirst",
+        "command": "INSERT INTO `dc_badges` (`id`, `SPAN`, `NAME`) VALUES (1, 'badge bg-danger text-white', 'Important');"
+    },
+    {
+        "type": "insertFirst",
+        "command": "INSERT INTO `dc_footer` (`id`, `NAME`, `TYPE`, `LINK`, `ICON`) VALUES(1, 'Home', 'Pages', '?page=home', NULL),(2, '+33 00000000', 'Contact', NULL, 'fas fa-phone'),(3, 'Notre discord', 'Contact', 'https://dommioss.fr/discord ', 'fab fa-discord'),(4, 'Privacy Policy', 'Links', '?page=privacy', NULL),(5, 'Members list', 'Pages', '?page=members', NULL),(6, 'Sign in', 'Pages', '?page=login', NULL);"
+    },
+    {
+        "type": "insertFirst",
+        "command": "INSERT INTO `dc_forum` (`id`, `NAME`, `DESCRIPTION`, `PERMISSION_WRITE_LEVEL`, `PERMISSION_SEE_LEVEL`, `ICON`, `PARENT_ID`, `ORDER_LISTING`) VALUES(1, 'first forum', 'This is my first forum description !', 1, 0, 'far fa-newspaper', '1', 0),(2, 'superadmin forum', NULL, 0, 100, NULL, '2', 0);"
+    },
+    {
+        "type": "insertFirst",
+        "command": "INSERT INTO `dc_header` (`id`, `NAME`, `LINK`, `ICON`) VALUES(1, 'Home', '?page=home', 'fas fa-home'),(2, 'Members', '?page=members', 'fas fa-users');"
+    },
+    {
+        "type": "insertFirst",
+        "command": "INSERT INTO `dc_ranks` (`id`, `NAME`, `DISPLAY`, `BADGE_COLOR`, `PERMISSION_LEVEL`, `SUPERADMIN`, `MAINTENANCE_MANAGE`, `ADMIN_BAN`, `MESSAGE_DELETE`, `ADMIN_PANELACCESS`, `ADMIN_WARN`, `ADMIN_EDIT_OTHER_MESSAGE`, `ADMIN_DELETE_TOPIC`, `ADMIN_MANAGE_FORUMS`, `ADMIN_MANAGE_CATEGORIES`, `ADMIN_PAGE_CREATE`, `ADMIN_TOPIC_MOVE`, `ADMIN_TOPIC_PREFIXCHANGE`, `ADMIN_RANK_EDIT`, `ADMIN_TOPIC_EDIT`, `ADMIN_THEME_EDIT`) VALUES(1, 'Member', 1, 'bg-dark', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),(2, 'Superadmin', 1, 'bg-danger', 100, 'on', 'on', 'on', 'on', 'on', 'on', 'on', 'on', 'on', 'on', 'on', 'on', 'on', 'on', 'on', 'on');"
+    },
+    {
+        "type": "insertFirst",
+        "command": "INSERT INTO `dc_reactions_images` (`id`, `PATH`, `GIFT`) VALUES(1, 'like.png', 1),(2, 'dislike.png', -1),(3, 'love.png', 2),(4, 'open_mouth.png', 0),(5, 'rage.png', -2),(6, 'sad.png', 0);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_badges` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_bans_ip` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_category` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_emailcode` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_follow` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_footer` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_forum` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_header` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_members` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_messages` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_notifications` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_pages` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_ranks` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_reports` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_stickynotes` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_topics` ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_reactions`ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "primaryKey",
+        "command": "ALTER TABLE `dc_reactions_images`ADD PRIMARY KEY (`id`);"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_badges` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_bans_ip` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_category` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_emailcode` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_follow` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_footer` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_forum` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_header` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_members` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_messages` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_notifications` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_pages` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_ranks` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_reports` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_stickynotes` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_topics` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_reactions`MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;"
+    },
+    {
+        "type": "autoIncrement",
+        "command": "ALTER TABLE `dc_reactions_images`MODIFY `id` int(11) NOT NULL AUTO_INCREMENT"
+    }
+]

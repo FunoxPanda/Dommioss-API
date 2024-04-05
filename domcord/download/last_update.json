@@ -1,0 +1,15 @@
+[
+    {
+        "name": "DomCord Release 1.0",
+        "version": "v1.0"
+    },
+    {
+        "dlurl": "https://github.com/DommiossGroup/DomCord/releases/download/1.0/DomCord-R1.0.zip",
+        "dl_filename": "DomCord-R1.0.zip",
+        "updateurlsql": "https://api.dommioss.fr/domcord/download/update-1.0-sql.json"
+    },
+    {
+        "themeName": "main.zip",
+        "themeURL": "https://github.com/DommiossGroup/DomCord-Default-Theme/archive/refs/heads/main.zip"
+    }
+]
